@@ -10,13 +10,13 @@ const CurrencyInput = ({ defaultValue, update }) => {
 
 	const handleChange = (e) => setValue(e.target.value);
 	return (
-		<div className={`currency-input ${defaultValue !== undefined ? 'default-value' : ''}`}>
+		<React.Fragment>
 			<span>£</span>
 			<input type="number"
 				min={0}
 				value={value}
 				onChange={handleChange} />
-		</div>
+		</React.Fragment>
 	)
 }
 
