@@ -16,7 +16,7 @@ export default class RequestBuilder {
     return this;
   }
 
-  withArguments(args) {
+  withParams(args) {
     this.args = args;
     return this;
   }

@@ -57,7 +57,7 @@ const DisplayGraph = ({ data, loading }) => {
 		{loading ? 
 			"Loading..." 
 		: 
-			<VictoryChart animate={{duration: 100}} theme={theme}>
+			<VictoryChart theme={theme}>
 				<VictoryLine {...{data}} y="amount"/>
 			</VictoryChart>
 		}

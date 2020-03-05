@@ -2,5 +2,6 @@ import RequestBuilder from '../builder'
 
 export function getCalculations(args) {
   const { frequency, init, monthly, rate } = args;
-  return new RequestBuilder('get', 'calc').withArguments(`${frequency}/${init}/${monthly}/${rate}`).send();
+  let query = `?frequency=${frequency}&init=${init}&monthly=${monthly}&rate=${rate}`;
+  return new RequestBuilder('get', 'calc').withParams(query).send();
 }

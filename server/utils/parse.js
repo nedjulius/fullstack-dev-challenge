@@ -1,6 +1,6 @@
 function parseRequest(req) {
-  let { init, monthly, rate } = req.params;
-  const { frequency } = req.params;
+  let { init, monthly, rate } = req;
+  const { frequency } = req;
   let divisor = 0;
 
   switch (frequency) {
