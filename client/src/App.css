@@ -1,6 +1,17 @@
+* {
+	box-sizing: border-box;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Avenir Next', 'Avenir', 'Lato', 'Helvetica', 'Arial', 'Sans-Serif';
 	font-weight: 600;
+}
+
+.header-banner > h1 {
+	font-size: 24px;
+	color: white;
+	text-align: center;
+	margin: 0px;
 }
 
 h1 {
@@ -53,4 +64,23 @@ p {
 .input-label {
 	margin-bottom: 4px;
 	margin-top: 12px;
+}
+
+.financial-display {
+	height: calc(100vh - 68px);
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	background-color: #ecf0f1;
+}
+
+.App > .inputs {
+	height: calc(100vh - 68px);
+	width: 50%;
+}
+
+.App {
+	display: flex;
 }
