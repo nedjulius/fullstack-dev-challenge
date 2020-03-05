@@ -34,7 +34,7 @@ const App = () => {
 						<FrequencyInput defaultValue={"monthly"} update={setFrequency} />
 					</div>
 					<div className="input-box sum">
-						In 50 years, you will earn: £{earnings}
+						In 50 years, you will earn: {earnings}
 					</div>
 			</div>
 			<div className="financial-display">

@@ -26,7 +26,7 @@ const useCalculate = () => {
     }
   }
 
-  let earnings = data[data.length - 1].amount - init;
+  let earnings = loading ? "Calculating..." : "£" + (data[data.length - 1].amount - init);
   return [
     setFrequency,
     setInit,
