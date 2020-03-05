@@ -57,30 +57,88 @@ p {
 	padding: 20px;
 }
 
-.financial-inputs {
-	padding: 20px;
-}
-
 .input-label {
 	margin-bottom: 4px;
 	margin-top: 12px;
 }
 
 .financial-display {
+	padding: 50px;
 	height: calc(100vh - 68px);
-	width: 50%;
+	width: 60%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 50%;
 	background-color: #ecf0f1;
 }
 
-.App > .inputs {
+.App > .financial-inputs {
 	height: calc(100vh - 68px);
-	width: 50%;
+	width: 40%;
+	padding: 20px;
 }
 
 .App {
 	display: flex;
 }
+
+.financial-inputs > .input-box {
+	padding: 15px;
+	width: 100%;
+}
+
+.financial-inputs > .input-box.sum {
+	border-radius: 5px;
+	background-color: #00b2ff;
+	margin-top: 20px;
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+	box-shadow: 0px 4px 8px 2px #00b3ff65;
+}
+
+.financial-inputs > .input-box input[type="number"],
+.financial-inputs > .input-box select
+{
+	margin-top: 5px;
+	width: 50%;
+	font-size: 14px;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0px 4px 5px -3px rgba(0,0,0,0.24);
+	background-color: rgb(247, 247, 247);
+	border: 1px solid rgb(228, 228, 228);
+	transition: 0.1s;
+	z-index: 9;
+}
+
+.financial-inputs > .input-box input[type="number"]:focus,
+.financial-inputs > .input-box select:focus
+{
+	box-shadow: 0px 4px 12px -3px rgba(0,0,0,0.24);
+	border: 1px solid #00b2ff;
+	transition: 0.1s;
+	outline: none;
+}
+
+.financial-inputs > .input-box span {
+	margin-right: 10px;
+	color: rgb(184, 184, 184);
+}
+
+.fmz-slider {
+	display: flex;
+}
+
+.fmz-slider > p {
+	color: #00b2ff;
+	width: 60px;
+}
+
+.fmz-slider > input {
+	margin-left: 20px;
+	width: 40%;
+}
+
+
