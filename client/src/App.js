@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import CurrencyInput from './components/CurrencyInput'
 import SliderInput from './components/SliderInput'
 import DisplayGraph from './components/DisplayGraph'
 import './App.css';
-
 import useCalculate from './hooks/use_calculate'
 
-import { getCalculations } from './requests'
 
 const App = () => {
 	const [setFrequency, setInit, setMonthly, setRate, loading, data] = useCalculate();

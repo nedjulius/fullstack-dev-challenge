@@ -4,23 +4,19 @@ import PropTypes from 'prop-types'
 import './CurrencyInput.css'
 
 const CurrencyInput = ({ defaultValue, update }) => {
-	const [has_focus, setFocus] = useState(false);
 	const [value, setValue] = useState(defaultValue);
-
 	useEffect(() => {
 		update(value);
 	}, [value]);
-	
+
 	const handleChange = (e) => setValue(e.target.value);
-	const handleFocus = (e) => setFocus(true);
-	
 	return (
 		<div className={`currency-input ${defaultValue !== undefined ? 'default-value' : ''}`}>
 			<span>£</span>
 			<input type="number"
+				min={0}
 				value={value}
-				onChange={handleChange}
-				onFocus={handleFocus}/>
+				onChange={handleChange} />
 		</div>
 	)
 }
