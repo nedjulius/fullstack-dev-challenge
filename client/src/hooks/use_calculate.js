@@ -17,7 +17,6 @@ const useCalculate = () => {
   const requestData = async () => {
     try {
       const res = await getCalculations({ frequency, init, monthly, rate });
-      console.log(res.data)
       setData(res.data);
     } catch (e) {
       console.log("An error occured...");

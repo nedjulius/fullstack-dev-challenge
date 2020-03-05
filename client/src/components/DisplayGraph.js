@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { VictoryLine, VictoryChart } from 'victory'
 
 
-const DisplayGraph = ({ data }) => {
+const DisplayGraph = ({ data, loading }) => {
 	const baseProps = {
 		width: 450,
 		height: 300,
@@ -53,11 +53,15 @@ const DisplayGraph = ({ data }) => {
 	};
 	
 	return (
-		<div style={{width: 50 + '%'}}>
+		<React.Fragment>
+		{loading ? 
+			"Loading..." 
+		: 
 			<VictoryChart animate={{duration: 100}} theme={theme}>
 				<VictoryLine {...{data}} y="amount"/>
 			</VictoryChart>
-		</div>
+		}
+		</React.Fragment>
 	);
 }
 
