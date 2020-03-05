@@ -2,6 +2,7 @@ import React from 'react';
 import CurrencyInput from './components/CurrencyInput'
 import SliderInput from './components/SliderInput'
 import DisplayGraph from './components/DisplayGraph'
+import FrequencyInput from './components/FrequencyInput'
 import './App.css';
 import useCalculate from './hooks/use_calculate'
 
@@ -23,6 +24,8 @@ const App = () => {
 
 				<p className="input-label">How much interest will you earn per year?</p>
 				<SliderInput defaultValue={4} update={setRate}/>
+
+				<FrequencyInput defaultValue={"monthly"} update={setFrequency} />
 			</div>
 			<div className="financial-display">
 				{/*We have included some sample data here, you will need to replace this
