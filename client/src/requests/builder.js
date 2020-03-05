@@ -37,7 +37,7 @@ export default class RequestBuilder {
     }
 
     const route = config.API_ROOT + this.route;
-    console.log(route)
+
     if(this.method === 'post') {
       // f.i. for POST request which requires body
       return;
