@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import './SliderInput.css'
 
 const SliderInput = ({ defaultValue, update }) => {
 	const [value, setValue] = useState(defaultValue);

@@ -26,13 +26,15 @@ const useCalculate = () => {
     }
   }
 
+  let earnings = data[data.length - 1].amount - init;
   return [
     setFrequency,
     setInit,
     setMonthly,
     setRate,
     loading,
-    data
+    data,
+    earnings
   ]
 }
 

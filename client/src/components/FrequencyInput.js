@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types'
-import './CurrencyInput.css'
 
 const FrequencyInput = ({ defaultValue, update }) => {
 	const [value, setValue] = useState(defaultValue);
