@@ -7,7 +7,7 @@ function calculateSavings(req) {
   return Array(constants.PERIOD).fill().map((_, i) => {
     value = i != 0 ? value + monthly : value;
     if ((i + 1) % divisor == 0) value = value + (value * rate);
-    return Object({month: i + 1, amount: value.toFixed(2)});
+    return Object({month: i + 1, amount: Number(value.toFixed(2))});
   });
 }
 
